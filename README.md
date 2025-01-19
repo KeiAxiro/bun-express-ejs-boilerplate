@@ -18,7 +18,7 @@ This is a boilerplate project for building web applications using Express and EJ
 
 1. **Clone the repository**:
    ```sh
-   git clone https://github.com/yourusername/express-ejs-boilerplate.git
+   git clone https://github.com/KeiAxiro/express-ejs-boilerplate.git
    ```
 2. **Navigate to the project directory**:
    ```sh
