@@ -3,6 +3,7 @@
   "module": "bin/www.ts",
   "type": "module",
   "scripts": {
+    "debug": "bun --inspect bin/www.ts",
     "start": "bun --watch bin/www.ts"
   },
   "devDependencies": {

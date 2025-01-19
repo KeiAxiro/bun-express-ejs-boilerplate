@@ -4,13 +4,10 @@
  * Module dependencies.
  */
 
-import { log } from "console";
 import app from "../app";
-import debugModule from "debug";
-const debug = debugModule("express-ts:server");
 import http from "http";
 
-debug("Starting server...");
+console.log("Starting server...");
 
 /**
  * Get port from environment and store in Express.
@@ -37,7 +34,7 @@ server.on("listening", onListening);
  * Normalize a port into a number, string, or false.
  */
 
-function normalizePort(val) {
+function normalizePort(val: string): number | string | false {
   const port = parseInt(val, 10);
 
   if (isNaN(port)) {
@@ -57,11 +54,7 @@ function normalizePort(val) {
  * Event listener for HTTP server "error" event.
  */
 
-function onError(error) {
-  if (error.syscall !== "listen") {
-    throw error;
-  }
-
+function onError(error: NodeJS.ErrnoException): void {
   const bind = typeof port === "string" ? "Pipe " + port : "Port " + port;
 
   // handle specific listen errors with friendly messages
@@ -91,5 +84,10 @@ function onListening() {
       : addr !== null
       ? "port " + addr.port
       : "unknown";
-  debug("Listening on " + bind);
+  console.info("Listening on " + bind);
+  console.info("Server started successfully!");
+  if (addr !== null && typeof addr !== "string") {
+    console.info(`Visit http://localhost:${addr.port} to see the app.`);
+  }
+  console.debug("Press Ctrl+C to quit.");
 }
