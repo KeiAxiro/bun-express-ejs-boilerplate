@@ -4,10 +4,13 @@
  * Module dependencies.
  */
 
+import { log } from "console";
 import app from "../app";
 import debugModule from "debug";
-const debug = debugModule("buntest:server");
+const debug = debugModule("express-ts:server");
 import http from "http";
+
+debug("Starting server...");
 
 /**
  * Get port from environment and store in Express.
