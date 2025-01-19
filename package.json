@@ -1,0 +1,31 @@
+{
+  "name": "buntest",
+  "module": "bin/www.ts",
+  "type": "module",
+  "scripts": {
+    "start": "bun --watch bin/www.ts"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.18.0",
+    "@types/bun": "latest",
+    "eslint": "^9.18.0",
+    "globals": "^15.14.0",
+    "typescript-eslint": "^8.20.0"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "@prisma/client": "^6.2.1",
+    "@types/express": "^5.0.0",
+    "cookie-parser": "^1.4.7",
+    "debug": "^4.4.0",
+    "dotenv": "^16.4.7",
+    "ejs": "^3.1.10",
+    "express": "^4.21.2",
+    "express-generator": "^4.16.1",
+    "http-errors": "^2.0.0",
+    "morgan": "^1.10.0",
+    "prisma": "^6.2.1"
+  }
+}
